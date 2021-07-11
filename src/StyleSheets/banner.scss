@@ -1,0 +1,120 @@
+.banner
+{
+  justify-content: center;
+  align-items: center;
+
+  @include desktop { height: calc(100vh); }
+  @include tablet { margin-top: 50px }
+  @include mobile { margin-top: 50px }
+  display: flex;
+  &-container
+  {
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    display: flex;
+    @include desktop { flex-direction: row-reverse; }
+    @include tablet { flex-direction: row-reverse; }
+    @include mobile { flex-direction: column; }
+  }
+
+  &-greeting
+  {
+    padding: 50px;
+
+    @include desktop { text-align: right; margin-right: 100px; }
+    @include tablet { text-align: center; }
+    @include mobile { text-align: center; padding-top: 10px }
+
+    p
+    {
+      @include desktop { font-size: 30px;  }
+      @include tablet { font-size: 18px; }
+      @include mobile { font-size: 18px; }
+      transition: 0.3s;
+      word-break: keep-all;
+
+
+      font-weight: 700;
+      color: $text;
+      user-select: none;
+    }
+    h1
+    {
+      @include desktop { font-size: 80px;  }
+      @include tablet { font-size: 40px; }
+      @include mobile { font-size: 40px; }
+      font-weight: 800;
+      color: $text;
+      transition: 0.3s;
+      word-break: keep-all;
+    }
+    & > div
+    {
+      @include desktop { justify-content: flex-end;  }
+      @include tablet { width: 100%; justify-content: center; }
+      @include mobile { width: 100%; justify-content: center; }
+      align-items: flex-end;
+      display: flex;
+
+      p, h1
+      {
+        margin: 0;
+        word-break: keep-all;
+      }
+
+      p
+      {
+        margin-right: 15px;
+        @include desktop { transform: translateY(-12px);  }
+        @include tablet { transform: translateY(-6px); }
+        @include mobile { transform: translateY(-6px); }
+      }
+    }
+
+    & > button
+    {
+      color: $text;
+      background: $blue-1;
+      border: none;
+      font-size: 20px;
+      font-weight: 700;
+      padding: 10px 20px;
+
+      margin-top: 10px;
+
+      border-radius: 30px;
+      box-shadow: 0 0 10px #00000060;
+
+      transition: 0.3s;
+
+      &:hover
+      {
+        box-shadow: 0 0 3px #00000060;
+      }
+    }
+
+  }
+  &-image
+  {
+    @include desktop { width: 350px; height: 350px;  }
+    @include tablet { width: 200px; height: 200px; }
+    @include mobile { width: 200px; height: 200px; }
+    transition: 0.3s;
+    background-image: linear-gradient(0deg, #63D7E0, #63D7E000, #67A7F400);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 20px #00000060;
+
+    & > img
+    {
+      max-height: 120%;
+      max-width: 120%;
+      margin-top: 25%;
+    }
+  }
+}

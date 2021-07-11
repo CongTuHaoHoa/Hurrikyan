@@ -1,0 +1,17 @@
+::-webkit-scrollbar
+{
+  width: 10px;
+  background: $blue-2;
+
+  &-thumb
+  {
+    border-radius: 10px;
+    background: #0068FF;
+
+    &:hover
+    {
+      background: #00CFFF;
+    }
+  }
+
+}
